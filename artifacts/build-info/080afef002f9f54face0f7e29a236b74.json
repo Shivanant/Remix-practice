@@ -1,0 +1,72 @@
+{
+	"id": "080afef002f9f54face0f7e29a236b74",
+	"_format": "hh-sol-build-info-1",
+	"solcVersion": "0.8.24",
+	"solcLongVersion": "0.8.24+commit.e11b9ed9",
+	"input": {
+		"language": "Solidity",
+		"sources": {
+			"contracts/test1.sol": {
+				"content": "// // SPDX-License-Identifier: MIT\r\n// pragma solidity ^0.8.0;\r\n\r\n// contract ContractA {\r\n//     uint public a;\r\n\r\n//     function set_Value(uint _a) external {\r\n//         a = _a;\r\n//     }\r\n// }\r\n\r\n// contract ContractB {\r\n//     ContractA public contractA;\r\n\r\n//     constructor(ContractA _contractAInstance) {\r\n//         contractA = _contractAInstance;\r\n//     }\r\n\r\n//     function set_AValue(uint _a) external {\r\n//         contractA.set_Value(_a);\r\n//     }\r\n\r\n//     function get_AValue() external view returns (uint) {\r\n//         return contractA.a();\r\n//     }\r\n// }\r\n"
+			}
+		},
+		"settings": {
+			"optimizer": {
+				"enabled": false,
+				"runs": 200
+			},
+			"outputSelection": {
+				"*": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"metadata",
+						"devdoc",
+						"userdoc",
+						"storageLayout",
+						"evm.legacyAssembly",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"evm.gasEstimates",
+						"evm.assembly"
+					]
+				}
+			},
+			"remappings": []
+		}
+	},
+	"output": {
+		"errors": [
+			{
+				"component": "general",
+				"errorCode": "3420",
+				"formattedMessage": "Warning: Source file does not specify required compiler version! Consider adding \"pragma solidity ^0.8.24;\"\n--> contracts/test1.sol\n\n",
+				"message": "Source file does not specify required compiler version! Consider adding \"pragma solidity ^0.8.24;\"",
+				"severity": "warning",
+				"sourceLocation": {
+					"end": -1,
+					"file": "contracts/test1.sol",
+					"start": -1
+				},
+				"type": "Warning"
+			}
+		],
+		"sources": {
+			"contracts/test1.sol": {
+				"ast": {
+					"absolutePath": "contracts/test1.sol",
+					"exportedSymbols": {},
+					"id": 1,
+					"license": "MIT",
+					"nodeType": "SourceUnit",
+					"nodes": [],
+					"src": "580:0:0"
+				},
+				"id": 0
+			}
+		}
+	}
+}

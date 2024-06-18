@@ -1,0 +1,66 @@
+{
+	"compiler": {
+		"version": "0.8.24+commit.e11b9ed9"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "deposit",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "winner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/selfDistructAttack.sol": "EtherGame"
+		},
+		"evmVersion": "shanghai",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/selfDistructAttack.sol": {
+			"keccak256": "0xb67b5361583dc3e4029d495bf28ca7bdcfb9a5bfe6bf42784caf850d409353a8",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://e2833624031756a4cd70ae35c47e486b1ffe1e93042c0b87ad3f38f239324bbf",
+				"dweb:/ipfs/QmcdU1PMirH918EvVRs7UHdcRq9eP3CHcmtkd5TATQixBq"
+			]
+		}
+	},
+	"version": 1
+}

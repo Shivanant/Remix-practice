@@ -1,0 +1,72 @@
+{
+	"compiler": {
+		"version": "0.8.24+commit.e11b9ed9"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "getValue",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_value",
+						"type": "uint256"
+					}
+				],
+				"name": "setValue",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/lab2q4.sol": "MyContractImplementation"
+		},
+		"evmVersion": "shanghai",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/lab2q4.sol": {
+			"keccak256": "0x9b47ad8f1ffe50810d703ae05aa33979d85a1505cc92e4a93d46f80fbb7a8745",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://c480950ab26326937590e55076f4ab8c260f1419bcfa48cefe81e3e955c110ef",
+				"dweb:/ipfs/QmRn8SL7A9H1mtmRmQR9sVE8e8V652auqFvtr6i5Bahf7Q"
+			]
+		}
+	},
+	"version": 1
+}

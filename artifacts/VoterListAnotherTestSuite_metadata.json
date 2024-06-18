@@ -1,0 +1,76 @@
+{
+	"compiler": {
+		"version": "0.8.24+commit.e11b9ed9"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "beforeEach",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "testAddMultipleVoters",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/lab6ii.sol": "VoterListAnotherTestSuite"
+		},
+		"evmVersion": "shanghai",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/lab6.sol": {
+			"keccak256": "0x873983340824c955ba98709398eb33f983ed37ce0b786044439a08008a0cc282",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://d140075024e1261bcf4d0206cffa860b2e8a06b43842766ad4d586405de7c187",
+				"dweb:/ipfs/QmeE2juGnpyFxQzgK5LD6dagRmwBuKPgWwWPVRKXjP5CvK"
+			]
+		},
+		"contracts/lab6ii.sol": {
+			"keccak256": "0xb056e09035fc4d2f8cdc8872913ac952b56d34d288278494b01bd3843c7d7f91",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://6a3a67e24c52e18842d7d515c3e87ce1a506129d2021febb16119132dfc78686",
+				"dweb:/ipfs/QmT25DYZxmcaiDBofS4XGBJ9gLN25fMZDSBicaaprNp95u"
+			]
+		},
+		"remix_tests.sol": {
+			"keccak256": "0xe2783cdc204cba8c72494119339f1d90f9022b15d6c718c668b7f097d8e29787",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://bb6a22e64c7f16bcaab63b1c1a1b269d5be8a6d37bdd9dec1718477ab916b18e",
+				"dweb:/ipfs/QmdkW1tT5iadBvaHMCoskhDGZKnfdg8o1D9CcoQYtdJet7"
+			]
+		}
+	},
+	"version": 1
+}

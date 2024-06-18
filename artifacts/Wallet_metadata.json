@@ -1,0 +1,77 @@
+{
+	"compiler": {
+		"version": "0.8.24+commit.e11b9ed9"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address payable",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address payable",
+						"name": "add2",
+						"type": "address"
+					}
+				],
+				"name": "transferfunds",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/wallet.sol": "Wallet"
+		},
+		"evmVersion": "shanghai",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/wallet.sol": {
+			"keccak256": "0x9d24a291e04abc28a461ed474556b7c9ee3d12979cee98520f9c5330fea73ea6",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://6bd339f60cff496a06df8a6081a079d4d5b2eeebea0c7f1f84ea931b36e2795b",
+				"dweb:/ipfs/QmTuGjuTNuZcuyoDC3vqCboaaEdFNGpu2jU5EFhF4mxWc3"
+			]
+		}
+	},
+	"version": 1
+}

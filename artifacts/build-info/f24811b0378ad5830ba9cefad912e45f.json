@@ -1,0 +1,72 @@
+{
+	"id": "f24811b0378ad5830ba9cefad912e45f",
+	"_format": "hh-sol-build-info-1",
+	"solcVersion": "0.8.24",
+	"solcLongVersion": "0.8.24+commit.e11b9ed9",
+	"input": {
+		"language": "Solidity",
+		"sources": {
+			"contracts/wallet.sol": {
+				"content": "// // SPDX-License-Identifier: MIT\r\n// pragma solidity ^0.8.19;\r\n\r\n// contract Wallet {\r\n//     // address payable public add1;\r\n//     // address payable public add2;\r\n//     address payable public owner;\r\n//     constructor() {\r\n//         owner= payable(msg.sender);\r\n        \r\n//     }\r\n\r\n//     function transferfunds(address payable add2)public payable{\r\n//         // require(add1!=add2,\"Same address funds transfer\");\r\n//         require(msg.value > 0, \"No Ether sent\");\r\n//         add2.transfer(msg.value);\r\n\r\n//     }\r\n// }"
+			}
+		},
+		"settings": {
+			"optimizer": {
+				"enabled": false,
+				"runs": 200
+			},
+			"outputSelection": {
+				"*": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"metadata",
+						"devdoc",
+						"userdoc",
+						"storageLayout",
+						"evm.legacyAssembly",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"evm.gasEstimates",
+						"evm.assembly"
+					]
+				}
+			},
+			"remappings": []
+		}
+	},
+	"output": {
+		"errors": [
+			{
+				"component": "general",
+				"errorCode": "3420",
+				"formattedMessage": "Warning: Source file does not specify required compiler version! Consider adding \"pragma solidity ^0.8.24;\"\n--> contracts/wallet.sol\n\n",
+				"message": "Source file does not specify required compiler version! Consider adding \"pragma solidity ^0.8.24;\"",
+				"severity": "warning",
+				"sourceLocation": {
+					"end": -1,
+					"file": "contracts/wallet.sol",
+					"start": -1
+				},
+				"type": "Warning"
+			}
+		],
+		"sources": {
+			"contracts/wallet.sol": {
+				"ast": {
+					"absolutePath": "contracts/wallet.sol",
+					"exportedSymbols": {},
+					"id": 1,
+					"license": "MIT",
+					"nodeType": "SourceUnit",
+					"nodes": [],
+					"src": "534:0:0"
+				},
+				"id": 0
+			}
+		}
+	}
+}

@@ -1,0 +1,53 @@
+{
+	"compiler": {
+		"version": "0.8.24+commit.e11b9ed9"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "transferToSelf",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/lab3iii.sol": "PayableContract"
+		},
+		"evmVersion": "shanghai",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/lab3iii.sol": {
+			"keccak256": "0x400b93a225e78f6c8c54dc9ea3dd09cf06a65b829dec5b11eda0cf77882c1e28",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://75bc9e19b6ce058030607ab3af8e89b705368ca5121e83424a71997a0ff9c525",
+				"dweb:/ipfs/QmVj7XPPM15Su6hivs7mnMSvocvimw5qBtT5pbMLMXRRy1"
+			]
+		}
+	},
+	"version": 1
+}

@@ -1,0 +1,69 @@
+{
+	"id": "f6cfe589151b24b1b9d9d4eaee96e5a8",
+	"_format": "hh-sol-build-info-1",
+	"solcVersion": "0.8.24",
+	"solcLongVersion": "0.8.24+commit.e11b9ed9",
+	"input": {
+		"language": "Solidity",
+		"sources": {
+			"contracts/practice.sol": {
+				"content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.19;\r\n\r\n// contract EventExample {\r\n//     event NewTransaction(\r\n//         address indexed from,\r\n//         address indexed to,\r\n//         uint256 amount,\r\n//         string message\r\n//     );\r\n\r\n//     event SimpleEvent(\r\n//         string info\r\n//     );\r\n\r\n//     uint256 public totalBalance;\r\n\r\n//     mapping(address => uint256) public balances;\r\n\r\n//     function sendTransaction(address to, uint256 amount, string memory message) public {\r\n//         require(balances[msg.sender] >= amount, \"Insufficient balance\");\r\n\r\n//         balances[msg.sender] -= amount;\r\n\r\n//         balances[to] += amount;\r\n\r\n//         emit NewTransaction(msg.sender, to, amount, message);\r\n//     }\r\n\r\n//     function depositFunds() public payable {\r\n//         require(msg.value > 0, \"Must deposit a positive amount\");\r\n\r\n//         balances[msg.sender] += msg.value;\r\n\r\n//         totalBalance += msg.value;\r\n\r\n//         emit SimpleEvent(\"Funds deposited\");\r\n//     }\r\n\r\n//     function withdrawFunds(uint256 amount) public {\r\n//         require(balances[msg.sender] >= amount, \"Insufficient balance\");\r\n\r\n//         balances[msg.sender] -= amount;\r\n\r\n//         totalBalance -= amount;\r\n\r\n//         payable(msg.sender).transfer(amount);\r\n\r\n//         emit SimpleEvent(\"Funds withdrawn\");\r\n//     }\r\n\r\n//     function getBalance(address addr) public view returns (uint256) {\r\n//         return balances[addr];\r\n//     }\r\n//     function getTotalBalance() public view returns (uint256) {\r\n//         return totalBalance;\r\n//     }\r\n// }\r\n// pragma solidity ^0.8.0;\r\n\r\n// contract Parent1 {\r\n//     function foo() public virtual returns (string memory) {\r\n//         return \"Parent1\";\r\n//     }\r\n// }\r\n\r\n// contract Parent2 {\r\n//     function foo() public virtual returns (string memory) {\r\n//         return \"Parent2\";\r\n//     }\r\n// }\r\n\r\n// contract Child is Parent1, Parent2 {\r\n//     function foo() public override(Parent1, Parent2) returns (string memory) {\r\n//         // Calling the foo function from Parent1 using super\r\n//         return super.foo();\r\n//     }\r\n// // }\r\n// contract payment{\r\n//     address payable public  owner;\r\n//     constructor(){\r\n//         owner=payable(msg.sender);\r\n//     }\r\n\r\n//     function withdraw()public payable {\r\n//         require(msg.sender==owner,\"NOt the owner\");\r\n//         (bool success,)=owner.call{value:payable (address(this)).balance}(\"\");\r\n//         require(success,\"Not success\");\r\n//     }\r\n//     function sendmoney()public payable {\r\n//         (bool s,)=payable(address(this)).call{value:msg.value}(\"\");\r\n//         require(s,\"Fail\");\r\n//     }\r\n//     receive() external payable { }\r\n\r\n// }\r\n\r\n// contract Delegate {\r\n//     uint256 public number;\r\n\r\n//     function setNumber(uint256 _number) public {\r\n//         number = _number;\r\n//     }\r\n// }\r\n\r\n// contract MedicalHistory {\r\n//     struct MedicalRecord {\r\n//         uint256 id;\r\n//         string description;\r\n//         uint256 date;\r\n//         address doctor;\r\n//     }\r\n\r\n//     struct Patient {\r\n//         uint256 id;\r\n//         string name;\r\n//         address addr;\r\n//     }\r\n\r\n//     mapping(address => Patient) private patients;\r\n//     mapping(uint256 => address) private patientIds;\r\n//     mapping(address => mapping(uint256 => MedicalRecord)) private medicalRecords;\r\n//     mapping(address => uint256) private recordCount;\r\n\r\n//     uint256 private nextPatientId = 1;\r\n\r\n//     address public owner;\r\n\r\n//     modifier onlyOwner() {\r\n//         require(msg.sender == owner, \"Only the owner can perform this action\");\r\n//         _;\r\n//     }\r\n\r\n//     modifier onlyPatientOrOwner(address patientAddr) {\r\n//         require(\r\n//             msg.sender == patientAddr || msg.sender == owner,\r\n//             \"Only the patient or owner can perform this action\"\r\n//         );\r\n//         _;\r\n//     }\r\n\r\n//     constructor() {\r\n//         owner = msg.sender;\r\n//     }\r\n\r\n//     function registerPatient(string memory name, address addr) public onlyOwner {\r\n//         require(patients[addr].id == 0, \"Patient already registered\");\r\n//         patients[addr] = Patient(nextPatientId, name, addr);\r\n//         patientIds[nextPatientId] = addr;\r\n//         nextPatientId++;\r\n//     }\r\n\r\n//     function addMedicalRecord(\r\n//         address patientAddr,\r\n//         string memory description,\r\n//         uint256 date\r\n//     ) public onlyOwner {\r\n//         require(patients[patientAddr].id != 0, \"Patient not registered\");\r\n//         uint256 newRecordId = recordCount[patientAddr] + 1;\r\n//         medicalRecords[patientAddr][newRecordId] = MedicalRecord(newRecordId, description, date, msg.sender);\r\n//         recordCount[patientAddr]++;\r\n//     }\r\n\r\n//     function getMedicalRecord(address patientAddr, uint256 recordId)\r\n//         public\r\n//         view\r\n//         onlyPatientOrOwner(patientAddr)\r\n//         returns (MedicalRecord memory)\r\n//     {\r\n//         require(patients[patientAddr].id != 0, \"Patient not registered\");\r\n//         require(recordId > 0 && recordId <= recordCount[patientAddr], \"Invalid record ID\");\r\n//         return medicalRecords[patientAddr][recordId];\r\n//     }\r\n\r\n//     function getRecordCount(address patientAddr)\r\n//         public\r\n//         view\r\n//         onlyPatientOrOwner(patientAddr)\r\n//         returns (uint256)\r\n//     {\r\n//         require(patients[patientAddr].id != 0, \"Patient not registered\");\r\n//         return recordCount[patientAddr];\r\n//     }\r\n\r\n//     function getPatient(address patientAddr)\r\n//         public\r\n//         view\r\n//         onlyPatientOrOwner(patientAddr)\r\n//         returns (Patient memory)\r\n//     {\r\n//         require(patients[patientAddr].id != 0, \"Patient not registered\");\r\n//         return patients[patientAddr];\r\n//     }\r\n// }\r\n// contract Car {\r\n//     address public owner;\r\n//     string public model;\r\n\r\n//     constructor(address _owner, string memory _model) {\r\n//         owner = _owner;\r\n//         model = _model;\r\n//     }\r\n// }\r\n\r\n// contract CarFactory {\r\n//     address public owner;\r\n//     address[] public deployedCars;\r\n\r\n//     modifier onlyOwner() {\r\n//         require(msg.sender == owner, \"Only the owner can perform this action\");\r\n//         _;\r\n//     }\r\n\r\n//     constructor() {\r\n//         owner = msg.sender;\r\n//     }\r\n\r\n//     event CarCreated(address carAddress, address carOwner, string carModel);\r\n\r\n//     function createCar(address _owner, string memory _model) public onlyOwner {\r\n//         Car newCar = new Car(_owner, _model);\r\n//         deployedCars.push(address(newCar));\r\n//         emit CarCreated(address(newCar), _owner, _model);\r\n//     }\r\n\r\n//     function getDeployedCars() public view returns (address[] memory) {\r\n//         return deployedCars;\r\n//     }\r\n// }\r\n// interface IERC20 {\r\n//     function transfer(address,uint)external ;\r\n    \r\n// }\r\n// contract Token{\r\n//     function transfer(address,uint)external {}\r\n\r\n// }\r\n// contract AbiEncode{\r\n//     function test(address _contract,bytes calldata data) external{\r\n//         (bool s,)=_contract.call(data);\r\n//         require(s,\"Fail\");\r\n//     }\r\n\r\n//     function encodewithsign(address to, uint amount)external  pure returns(bytes memory){\r\n//         return abi.encodeWithSignature(\"transfer(address,uint)\",to,amount);\r\n//     }\r\n// }"
+			}
+		},
+		"settings": {
+			"optimizer": {
+				"enabled": false,
+				"runs": 200
+			},
+			"outputSelection": {
+				"*": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"metadata",
+						"devdoc",
+						"userdoc",
+						"storageLayout",
+						"evm.legacyAssembly",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"evm.gasEstimates",
+						"evm.assembly"
+					]
+				}
+			},
+			"remappings": []
+		}
+	},
+	"output": {
+		"sources": {
+			"contracts/practice.sol": {
+				"ast": {
+					"absolutePath": "contracts/practice.sol",
+					"exportedSymbols": {},
+					"id": 2,
+					"license": "MIT",
+					"nodeType": "SourceUnit",
+					"nodes": [
+						{
+							"id": 1,
+							"literals": [
+								"solidity",
+								"^",
+								"0.8",
+								".19"
+							],
+							"nodeType": "PragmaDirective",
+							"src": "33:24:0"
+						}
+					],
+					"src": "33:7292:0"
+				},
+				"id": 0
+			}
+		}
+	}
+}
